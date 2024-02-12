@@ -1,6 +1,7 @@
 #include <iostream>
 #include "clip.h"
-
+#include "command.h"
+#include "option.h"
 
 
 void clip(){
@@ -117,4 +118,17 @@ void clip_print_vector(const std::vector<std::string> &strings) {
     for(std::vector<std::string>::const_iterator it = strings.begin(); it != strings.end(); ++it) {
         std::cout << "clip/0.0.1 " << *it << std::endl;
     }
+}
+
+void clip_test()
+{
+    Clip::Command command("ok");
+    command
+    .subcommand(Clip::Command("sub").option(Clip::Option<std::string>("sub_option")))
+    .subcommand(Clip::Command("sub").option(Clip::Option<std::string>("sub_option")))
+    .subcommand(Clip::Command("sub2"))
+    .subcommand(Clip::Command("sub3"))
+    .option(Clip::Option<int>("top_option"));
+
+    std::cout << command.describe() << std::endl;
 }
