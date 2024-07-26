@@ -20,14 +20,3 @@ namespace Clip
 #include "option.tpp"
 
 #endif // OPTION_H
-
-
-
-    // public:
-    //     explicit Option(std::string unique_id);
-    //     Option<ValueType>& description(std::string description);
-
-    // private:
-    //     std::string unique_id_;
-    //     std::optional<std::string> description_{std::nullopt};
-    //     std::optional<ValueType> value_;

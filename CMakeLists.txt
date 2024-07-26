@@ -4,7 +4,11 @@ project(clip CXX)
 
 
 
-add_library(clip src/clip.cpp)
+add_library(clip 
+    src/clip.cpp
+    src/command.cpp
+)
+
 target_include_directories(clip PUBLIC include)
 
 

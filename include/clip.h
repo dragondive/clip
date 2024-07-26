@@ -10,5 +10,5 @@
   #define CLIP_EXPORT
 #endif
 
-CLIP_EXPORT void clip();
-CLIP_EXPORT void clip_print_vector(const std::vector<std::string> &strings);
+
+CLIP_EXPORT void clip_test();

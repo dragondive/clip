@@ -5,18 +5,6 @@
 
 namespace Clip
 {
-    // template<typename ValueType>
-    // Option<ValueType>::Option(std::string unique_id)
-    //     : unique_id_{unique_id}
-    // {}
-
-    // template<typename ValueType>
-    // Option<ValueType>& Option<ValueType>::description(std::string description)
-    // {
-    //     description_ = std::move(description);
-    //     return *this;
-    // }
-
     template<typename ValueType>
     std::string Option<ValueType>::describe() const
     {

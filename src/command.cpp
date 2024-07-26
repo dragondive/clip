@@ -1,5 +1,7 @@
 #include "command.h"
-#include <iostream>
+// #include <iostream>
+#include <algorithm>
+// #include <utility>
 
 #include <string>
 namespace Clip
@@ -15,11 +17,12 @@ namespace Clip
         std::string description;
         description += unique_name_;
 
-        for (const auto& selection : selections)
-        {
-            description += "\n" + selection->describe();
-        }
+        // for (const auto& selection : selections)
+        // {
+        //     description += "\n" + selection->describe();
+        // }
 
+        ranges::for_each(selections, [&](){ description += "\n" + selection->describe(); });
         return description;
     }
 }
